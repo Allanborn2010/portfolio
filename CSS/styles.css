@@ -1,0 +1,346 @@
+/* Page Refresh */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables */
+
+:root {
+    --primary-color: rgb(72, 145, 255);
+    --light-color: rgb(244, 244, 246);
+    --dark-color: rgb(17, 17, 17);
+    --black-color: rgb(0, 0, 0);
+}
+
+/* Webpage Tags */
+
+body {
+    font-family: "poppins", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: rgb(255, 255, 255);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Navbar */
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .main-menu ul {
+    display: flex;
+}
+
+.navbar ul li a {
+    padding: 10px 20px;
+    display: block;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary-color);
+}
+
+.navbar ul li a i {
+    margin-right: 10px;
+}
+
+.navbar ul li:last-child a {
+    margin-left: 10px;
+}
+
+/* Hero */
+
+.hero {
+    margin-bottom: 50px;
+}
+
+.hero .container {
+    background: url("../Images/PlaceHolderIcon.png") no-repeat;
+    background-size: 400px;
+    background-position: right bottom;
+    height: 550px;
+}
+
+.hero .hero-content {
+    width: 70%;
+}
+
+.hero .hero-text {
+    width: 70%;
+    margin-bottom: 20px;
+}
+
+.hero img {
+    width: 400px;
+    height: 200px;
+}
+
+/* Testimonials */
+
+.testimonials {
+    padding: 40px 0;
+}
+
+.testimonials .testimonials-heading {
+    width: 700px;
+    margin-bottom: 40px;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.testimonials .card p:nth-child(2) {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Q&A */
+
+.QA {
+    padding: 40px 0;
+}
+
+.QA .QA-group {
+    border-bottom: 1px solid rgb(204, 204, 204);
+    padding-bottom: 20px;
+}
+
+.QA .QA-group .QA-group-header {
+    padding: 20px 0;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.QA .QA-group .QA-group-header h4 {
+    font-weight: 600;
+    width: 95%;
+}
+
+.QA .QA-group .QA-group-header i {
+    position: absolute;
+    right: 0;
+    top: 35px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.QA .QA-group .QA-group-body {
+    display:none;
+}
+
+.QA .QA-group .QA-group-body.open {
+    display:block;
+}
+
+.QA ul.QA-menu {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(221, 221, 221);
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.QA ul.QA-menu li {
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.QA ul.QA-menu li.active {
+    background-color: var(--primary-color);
+    color: rgb(255, 255, 255);
+}
+
+.QA ul.QA-menu li:hover {
+    color: var(--primary-color);
+}
+
+/* Footer */
+
+.footer {
+    padding : 40px 0;
+}
+
+.footer h4 {
+    margin-bottom : 10px;
+    color: rgb(255, 255, 255);
+}
+
+.footer ul li {
+    line-height: 2.5;
+}
+
+.footer a {
+    color: rgb(204, 204, 204);
+}   
+
+.footer i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-card {
+    margin: 20px 30px 30px 0;
+}
+
+
+/* Utility Classes */
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.container-sm {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Utility Classes - Buttons */
+
+.btn {
+    display: inline-block;
+    padding: 13px 20px;
+    background: var(--light-color);
+    color: rgb(51, 51, 51);
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: rgb(255, 255, 255);
+}
+
+.btn-dark {
+    background: var(--dark-color);
+    color: rgb(255, 255, 255);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Utility Classes - Text */
+
+.text-xxl {
+    font-size: 3rem;
+    line-height: 1.2;
+    font-weight: 600;
+    margin: 40px 0 20px;
+}
+
+.text-xl {
+    font-size: 2.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 40px 0 20px;
+}
+
+.text-lg {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 30px 0 20px;
+}
+
+.text-md {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 20px 0 10px;
+}
+
+.text-sm {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    font-weight: normal;
+    margin: 10px 0 5px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Utility Classes - Background */
+.bg-primary {
+    background: var(--primary-color);
+    color: rgb(255, 255, 255);
+}
+.bg-light {
+    background: var(--light-color);
+    color: rgb(51, 51, 51);
+}
+.bg-dark {
+    background: var(--dark-color);
+    color: rgb(255, 255, 255);
+}
+
+.bg-black {
+    background: var(--black-color);
+    color: rgb(0, 0, 0);
+}
+
+/* Utility Classes - Testimonial Cards */
+
+.card {
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    padding: 20px;
+}
