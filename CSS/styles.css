@@ -22,6 +22,7 @@ body {
     font-size: 16px;
     line-height: 1.5;
     background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
 }
 
 a {
@@ -69,7 +70,7 @@ img {
     margin-right: 10px;
 }
 
-.navbar ul li:last-child a {
+.navbar .main-menu ul li:last-child a {
     margin-left: 10px;
 }
 
@@ -118,6 +119,28 @@ img {
 }
 
 .testimonials .card p:nth-child(2) {
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+/* Projects */
+
+.projects {
+    padding: 40px 0;
+}
+
+.projects .projects-heading {
+    width: 700px;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+}
+
+.projects .card p:nth-child(2) {
     margin-top: 30px;
     font-weight: bold;
 }
@@ -343,4 +366,119 @@ img {
     color: rgb(0, 0, 0);
     border-radius: 10px;
     padding: 20px;
+}
+
+/* Hamburger Button */
+
+.hamburger-button {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1000;
+}
+
+.hamburger-button .hamburger-line {
+    width: 30px;
+    height: 3px;
+    background: rgb(51, 51, 51);
+    margin: 6px 0;
+}
+
+/* Mobile Menu */
+
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+}  
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.mobile-menu ul {
+    margin-top: 100px;
+    padding-right: 10px;
+}
+
+.mobile-menu ul li {
+    margin: 10px 0;
+}
+
+.mobile-menu ul li a{
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+
+
+/* Media Queries */
+
+@media (max-width: 960px) {
+    .text-xxl {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 670px) {
+    .navbar .main-menu {
+        display: none;
+    }
+
+    .navbar .hamburger-button {
+        display: block;
+    }
+
+    .hero .container {
+        background: url(../Images/android-chrome-512x512.png) no-repeat;
+        background-size: 325px 350px;
+        background-position: bottom;
+        height: 770px;
+    }
+
+    .hero .hero-content, .hero .hero-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Testimonials */
+
+    .testimonials .testimonials-heading {
+        width: 100%;
+        text-align: center;
+    }
+
+    .testimonials .testimonials-grid, .footer .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer .footer-grid > div {
+        text-align: center;
+    }
+
+    /* Text */
+
+    .text-xl {
+        font-size: 1.9rem;
+    }
+    .text-lg {
+        font-size: 1.5rem;
+    }
+    .text-md {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .text-xxl {
+        font-size: 2rem;
+    }
 }

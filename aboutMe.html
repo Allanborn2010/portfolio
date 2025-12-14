@@ -3,17 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alfie Allan</title>
+    <title>About — Alfie Allan</title>
 
     <link rel="stylesheet" href="CSS/styles.css">
-
     <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav class="navbar">
@@ -26,19 +23,64 @@
 
             <div class="main-menu">
                 <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="aboutMe.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                    </li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutMe.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                </ul>
+            </div>
+
+            <button class="hamburger-button">
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+                <div class="hamburger-line"></div>
+            </button>
+            <div class="mobile-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutMe.html">About Me</a></li>
+                    <li><a href="projects.html">Projects</a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-heading text-xxl">About Me</h1>
+                <p class="hero-text">
+                    Hi — I'm Alfie. I'm learning web development (HTML, CSS, JavaScript) and exploring software and cybersecurity.
+                    I build small projects to learn, and I'm currently studying courses from IBM and Cisco to expand my skills.
+                </p>
+                <p class="hero-text">
+                    Skills: HTML, CSS, JavaScript, Python. Interests: full-stack development, security, and practical projects that help people.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-black">
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html"><img src="Images/PlaceHolderIcon-64x64.png" alt="avatar"></a>
+                    <i class="fab fa-linkedin"></i>
+                </div>
+                <div>
+                    <h4>Next Pages</h4>
+                    <ul>
+                        <li><a href="aboutMe.html">About Me</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Contact Me</h4>
+                    <p>Placeholder contact info</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="JS/main.js"></script>
 </body>
 </html>
