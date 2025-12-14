@@ -126,23 +126,43 @@ img {
 /* Projects */
 
 .projects {
-    padding: 40px 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    padding: 20px 0;
+    margin-top: 40px;
 }
 
-.projects .projects-heading {
-    width: 700px;
-    margin-bottom: 40px;
+.projects .projects-grid .card {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 30px;
+.projects .projects-grid {
+    display: flex;
+    width: max-content;
+    align-items: center;
+    animation: scroll 20s linear infinite;
 }
 
-.projects .card p:nth-child(2) {
-    margin-top: 30px;
-    font-weight: bold;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.projects .projects-grid:hover {
+    animation-play-state: paused;
 }
 
 /* Q&A */
