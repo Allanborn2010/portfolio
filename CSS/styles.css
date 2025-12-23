@@ -9,10 +9,10 @@
 /* Variables */
 
 :root {
-    --page-color: rgb(248, 248, 244);
+    --page-color: rgb(236, 236, 231);
     --primary-color: rgb(72, 145, 255);
     --light-color: rgb(244, 244, 246);
-    --dark-color: rgb(17, 17, 17);
+    --dark-color: rgb(10, 10, 10);
     --black-color: rgb(0, 0, 0);
 }
 
@@ -65,6 +65,7 @@ img {
     display: block;
     font-weight: 600;
     transition: 0.5s;
+    color: rgb(0, 0, 0);
 }
 
 .navbar ul li a:hover {
@@ -73,10 +74,6 @@ img {
 
 .navbar ul li a i {
     margin-right: 10px;
-}
-
-.navbar .main-menu ul li:last-child a {
-    margin-left: 10px;
 }
 
 /* Hero */
@@ -111,7 +108,7 @@ img {
 }
 
 .hero .hero-subheading .period {
-    color: rgb(250, 0, 0)
+    color: rgb(255, 0, 0)
 }
 
 .hero img {
@@ -122,11 +119,12 @@ img {
 /* Testimonials */
 
 .testimonials {
-    padding: 40px 0;
+    padding-bottom: 40px;
 }
 
 .testimonials .testimonials-heading {
     width: 700px;
+    margin-top: 40px;
     margin-bottom: 40px;
 }
 
@@ -161,6 +159,19 @@ img {
     text-align: center;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.projects .projects-grid .card, p , a {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.projects .projects-grid .card, p {
+    color: rgb(0, 0, 0);
+}
+
+.projects .projects-grid .card, a {
+    color: red;
 }
 
 .projects .projects-grid {
