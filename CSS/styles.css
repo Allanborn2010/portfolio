@@ -248,7 +248,7 @@ img {
     line-height: 2.5;
 }
 
-.footer a {
+.footer a, .footer p{
     color: rgb(204, 204, 204);
 }   
 
@@ -260,7 +260,7 @@ img {
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
     justify-content: center;
     align-items: center;
@@ -268,6 +268,64 @@ img {
 
 .footer-card {
     margin: 20px 30px 30px 0;
+}
+
+
+/* Center elements within the contact block */
+
+.contact-me {
+    background: rgb(245, 246, 247); /* light gray */
+    padding: 36px 28px;
+    border-radius: 12px;
+    max-width: 980px; /* more than enough room */
+    margin: 40px auto; /* centers the block */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px rgb(227, 228, 230);
+}
+
+.contact-me form {
+    width: 100%;
+    max-width: 920px;
+}
+
+.contact-me .form-columns {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.contact-me .form-column {
+    flex: 0 1 420px;
+}
+
+.contact-me .form-group label {
+    text-align: left;
+    display: block;
+}
+
+.contact-me .form-group input,
+.contact-me .form-group textarea {
+    display: block;
+    width: 100%;
+}
+
+.contact-me button {
+    width: 50px;
+    margin-top: 18px;
+    align-self: center;
+}
+
+@media (max-width: 960px) {
+    .contact-me { padding: 28px 18px; }
+}
+
+@media (max-width: 670px) {
+    .contact-me { margin: 24px 16px; }
 }
 
 

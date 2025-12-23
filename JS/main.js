@@ -68,3 +68,26 @@ document.addEventListener("DOMContentLoaded", () => {
     hamburgerButton.addEventListener("click", () => mobileMenu.classList.toggle("active"));
 });
 
+// Contact Form Email Sending
+
+function sendMail() {
+    const params = {
+        name: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        subject: document.getElementById("subject").value,
+        message: document.getElementById("message").value
+    };
+
+    emailjs.send('service_cxlx47k', 'template_zmajbsj', params)
+        .then(function(response) {
+            alert('Email Sent!');
+            // Optionally clear the form
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('subject').value = '';
+            document.getElementById('message').value = '';
+        }, function(error) {
+            alert('Failed to send email. Check console for details.');
+            console.error('EmailJS error:', error);
+        });
+}
