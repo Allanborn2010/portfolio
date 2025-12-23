@@ -1,11 +1,14 @@
-# GitLab Pages deployment
 image: alpine:latest
 
 pages:
   stage: deploy
   script:
-    - mkdir public
-    - cp -r * public
+    - mkdir -p public
+    # Copy only these folders/files into 'public', excluding 'public' itself
+    - cp -r index.html aboutMe.html contactme.html projects.html public/
+    - cp -r CSS public/
+    - cp -r JS public/
+    - cp -r Images public/
   artifacts:
     paths:
       - public
