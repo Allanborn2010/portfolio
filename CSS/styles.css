@@ -14,6 +14,7 @@
     --light-color: rgb(244, 244, 246);
     --dark-color: rgb(10, 10, 10);
     --black-color: rgb(0, 0, 0);
+    --orange-color: rgb(201, 117, 21);
 }
 
 /* Webpage Tags */
@@ -96,6 +97,7 @@ img {
 .hero .hero-text {
     width: 70%;
     margin-bottom: 20px;
+    margin-top: 20px;
 }
 
 .hero .hero-heading {
@@ -104,6 +106,7 @@ img {
 
 .hero .hero-subheading {
     margin-bottom: 20px;
+    margin-top: 20px;
     color: rgb(0, 0, 0);
 }
 
@@ -395,6 +398,11 @@ img {
 
 .btn-primary {
     background: var(--primary-color);
+    color: rgb(255, 255, 255);
+}
+
+.btn-orange {
+    background: var(--orange-color);
     color: rgb(255, 255, 255);
 }
 
