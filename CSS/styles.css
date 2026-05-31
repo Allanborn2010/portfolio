@@ -218,6 +218,10 @@ img {
     padding-bottom: 20px;
 }
 
+.QA .QA-content {
+    cursor: pointer;
+}
+
 .QA .QA-group .QA-group-header {
     padding: 20px 0;
     margin-bottom: 15px;
@@ -256,6 +260,7 @@ img {
     border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .QA ul.QA-menu li {
@@ -311,6 +316,45 @@ img {
 
 .footer-card {
     margin: 20px 30px 30px 0;
+}
+
+/* Blog */
+
+.blog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.current-project {
+    background: rgb(245, 246, 247); /* light gray */
+    padding: 36px 28px;
+    border-radius: 12px;
+    max-width: 500px; /* more than enough room */
+    margin: 40px auto; /* centers the block */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-shadow: 5px 5px rgb(227, 228, 230);
+}
+
+.current-project a {
+    color: #3a6447;
+    transition: color 0.3s ease;
+    
+}
+
+.current-project a:hover {
+    color: #508a62;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.current-project .timeline-list .card{
+    margin: 10px;
+    background-color: var(--page-color);
 }
 
 
