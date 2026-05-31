@@ -152,6 +152,10 @@ img {
     margin-top: 40px;
 }
 
+.projects .projects-heading {
+    padding: 0 20px;
+}
+
 .projects .projects-grid {
     display: flex;
     width: max-content;
@@ -285,6 +289,7 @@ img {
 .footer {
     padding : 40px 0;
     margin-top: auto;
+    color: rgb(255, 255, 255);
 }
 
 .footer h4 {
