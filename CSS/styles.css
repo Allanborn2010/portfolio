@@ -9,12 +9,12 @@
 /* Variables */
 
 :root {
-    --page-color: rgb(236, 236, 231);
-    --primary-color: rgb(72, 145, 255);
+    --page-color: rgb(246, 248, 250);
+    --primary-color: rgb(9, 105, 218);
     --light-color: rgb(244, 244, 246);
-    --dark-color: rgb(10, 10, 10);
+    --dark-color: rgb(36, 41, 47);
     --black-color: rgb(0, 0, 0);
-    --orange-color: rgb(201, 117, 21);
+    --github-color: rgb(36, 41, 47);
 }
 
 /* Webpage Tags */
@@ -459,8 +459,8 @@ img {
     color: rgb(255, 255, 255);
 }
 
-.btn-orange {
-    background: var(--orange-color);
+.btn-github {
+    background: var(--github-color);
     color: rgb(255, 255, 255);
 }
 
