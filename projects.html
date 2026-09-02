@@ -1,194 +1,294 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alfie Allan | Aspiring Software Developer</title>
 
-    <link rel="stylesheet" href="CSS/styles.css">
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
+    <link rel="stylesheet" href="CSS/styles.css" />
+    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="container">
-            <div class="name">
-                <a href="index.html">
-                    <img src="Images/PlaceHolderIcon-64x64.png" alt="avatar">
-                </a>
-            </div>
-
-            <div class="main-menu">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="aboutMe.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contactme.html">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Hamburger Button -->
-
-            <button class="hamburger-button">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </button>
-            <div class="mobile-menu">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="aboutMe.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contactme.html">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="name">
+          <a href="index.html">
+            <img src="Images/PlaceHolderIcon-64x64.png" alt="avatar" />
+          </a>
         </div>
+
+        <div class="main-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="aboutMe.html">About Me</a>
+            </li>
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="contactme.html">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hamburger Button -->
+
+        <button class="hamburger-button">
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+        <div class="mobile-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="aboutMe.html">About Me</a>
+            </li>
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="contactme.html">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-heading text-xxl">Projects</h1>
-                <p class="hero-text">A few software projects I've built whilst also learning web development.</p>
-                <div class="hero-buttons">
-                    <a href="https://github.com/Allanborn2010" class="btn btn-github" target="_blank"><i class="fa-brands fa-github"></i> View GitHub Profile <i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-heading text-xxl">Projects</h1>
+          <p class="hero-text">
+            A few software projects I've built whilst also learning web
+            development.
+          </p>
+          <div class="hero-buttons">
+            <a
+              href="https://github.com/Allanborn2010"
+              class="btn btn-github"
+              target="_blank"
+              ><i class="fa-brands fa-github"></i> View GitHub Profile
+              <i class="fas fa-external-link-alt"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Projects -->
 
-    <section class="projects">
-        <h3 class="projects-heading text-xl">
-            Some of my projects:
-        </h3>
-        <div class="container">
-            <div class="projects-grid">
-                <div class="card" onclick="window.open('https://github.com/Allanborn2010/to-do_list', '_blank')">
-                    <p class="text-md">
-                        To-Do List
-                    </p>
-                    <p>
-                        A simple to-do list web application built purely with python. It allows users to add, delete, and mark tasks as completed.
-                    </p>
-                </div>
-                <div class="card" onclick="window.open('https://github.com/Allanborn2010/number-guesser', '_blank')">
-                    <p class="text-md">
-                        Number Guesser
-                    </p>
-                    <p>
-                        A simple interactive Python game where the player tries to guess a randomly generated number between 1 and 100.
-                    </p>
-                </div>
-                <div class="card" onclick="window.open('https://github.com/Allanborn2010/password-manager', '_blank')">
-                    <p class="text-md">
-                        Password Manager
-                    </p>
-                    <p>
-                        A simple but secure password management tool built in Python. It allows users to store and retrieve passwords safely. Includes built in encryption for added security.
-                    </p>
-                </div>
+    <section class="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading" class="projects-heading text-xl">
+          Some of my projects:
+        </h2>
+      </div>
+      <div class="projects-carousel" aria-label="Project carousel">
+        <div class="projects-grid">
+          <div
+            class="card"
+            onclick="
+              window.open(
+                'https://github.com/Allanborn2010/to-do_list',
+                '_blank',
+              )
+            "
+          >
+            <p class="text-md">To-Do List</p>
+            <p>
+              A simple to-do list web application built purely with python. It
+              allows users to add, delete, and mark tasks as completed.
+            </p>
+          </div>
+          <div
+            class="card"
+            onclick="
+              window.open(
+                'https://github.com/Allanborn2010/number-guesser',
+                '_blank',
+              )
+            "
+          >
+            <p class="text-md">Number Guesser</p>
+            <p>
+              A simple interactive Python game where the player tries to guess a
+              randomly generated number between 1 and 100.
+            </p>
+          </div>
+          <div
+            class="card"
+            onclick="
+              window.open(
+                'https://github.com/Allanborn2010/password-manager',
+                '_blank',
+              )
+            "
+          >
+            <p class="text-md">Password Manager</p>
+            <p>
+              A simple but secure password management tool built in Python. It
+              allows users to store and retrieve passwords safely. Includes
+              built in encryption for added security.
+            </p>
+          </div>
 
-                <div class="card" onclick="window.open('https://github.com/Allanborn2010/calculator', '_blank')">
-                    <p class="text-md">
-                        Calculator
-                    </p>
-                    <p>
-                        A clean, responsive calculator built with HTML, CSS, and JavaScript. It handles everyday arithmetic tasks with a simple user interface and is deployed live so it can be used quickly and easily.
-                    </p>
-                    <a href="https://testsimplecalc.netlify.app/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">View Website</a>
-                </div>
+          <div
+            class="card"
+            onclick="
+              window.open(
+                'https://github.com/Allanborn2010/calculator',
+                '_blank',
+              )
+            "
+          >
+            <p class="text-md">Calculator</p>
+            <p>
+              A clean, responsive calculator built with HTML, CSS, and
+              JavaScript.
+            </p>
+            <a
+              href="https://testsimplecalc.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="event.stopPropagation()"
+              >View Website</a
+            >
+          </div>
 
-                <!-- Duplicate -->
+          <!-- Duplicate set creates the seamless loop. -->
 
-                <div class="card" onclick="window.open('https://github.com/Allanborn2010/to-do_list', '_blank')">
-                    <p class="text-md">
-                        To-Do List
-                    </p>
-                    <p>
-                        A simple to-do list web application built purely with python. It allows users to add, delete, and mark tasks as completed.
-                    </p>
-                </div>
-                <div class="card" onclick="window.open('https://github.com/Allanborn2010/number-guesser', '_blank')">
-                    <p class="text-md">
-                        Number Guesser
-                    </p>
-                    <p>
-                        A simple interactive Python game where the player tries to guess a randomly generated number between 1 and 100.
-                    </p>
-                </div>
-                <div class="card" onclick="window.open('https://github.com/Allanborn2010/password-manager', '_blank')">
-                    <p class="text-md">
-                        Password Manager
-                    </p>
-                    <p>
-                        A simple but secure password management tool built in Python. It allows users to store and retrieve passwords safely. Includes built in encryption for added security.
-                    </p>
-                </div>
+          <div
+            class="card card-copy"
+            aria-hidden="true"
+            onclick="
+              window.open(
+                'https://github.com/Allanborn2010/to-do_list',
+                '_blank',
+              )
+            "
+          >
+            <p class="text-md">To-Do List</p>
+            <p>
+              A simple to-do list web application built purely with python. It
+              allows users to add, delete, and mark tasks as completed.
+            </p>
+          </div>
+          <div
+            class="card card-copy"
+            aria-hidden="true"
+            onclick="
+              window.open(
+                'https://github.com/Allanborn2010/number-guesser',
+                '_blank',
+              )
+            "
+          >
+            <p class="text-md">Number Guesser</p>
+            <p>
+              A simple interactive Python game where the player tries to guess a
+              randomly generated number between 1 and 100.
+            </p>
+          </div>
+          <div
+            class="card card-copy"
+            aria-hidden="true"
+            onclick="
+              window.open(
+                'https://github.com/Allanborn2010/password-manager',
+                '_blank',
+              )
+            "
+          >
+            <p class="text-md">Password Manager</p>
+            <p>
+              A simple but secure password management tool built in Python. It
+              allows users to store and retrieve passwords safely. Includes
+              built in encryption for added security.
+            </p>
+          </div>
 
-                <div class="card" onclick="window.open('https://github.com/Allanborn2010/calculator', '_blank')">
-                    <p class="text-md">
-                        Calculator
-                    </p>
-                    <p>
-                        A clean, responsive calculator built with HTML, CSS, and JavaScript. It handles everyday arithmetic tasks with a simple user interface and is deployed live so it can be used quickly and easily.
-                    </p>
-                    <a href="https://testsimplecalc.netlify.app/" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation();">View Website</a>
-                </div>
-            </div>
+          <div
+            class="card card-copy"
+            aria-hidden="true"
+            onclick="
+              window.open(
+                'https://github.com/Allanborn2010/calculator',
+                '_blank',
+              )
+            "
+          >
+            <p class="text-md">Calculator</p>
+            <p>
+              A clean, responsive calculator built with HTML, CSS, and
+              JavaScript.
+            </p>
+            <a
+              href="https://testsimplecalc.netlify.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              onclick="event.stopPropagation()"
+              >View Website</a
+            >
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
 
     <footer class="footer bg-black">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="index.html"><img src="Images/PlaceHolderIcon-64x64.png" alt="avatar"></a>
-                    <a href="https://www.linkedin.com/in/alfieallan/" target="_blank" rel="noopener noreferrer" alt="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-                <div>
-                    <h4>Next Pages</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="aboutMe.html">About Me</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contactme.html">Contact Me</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html"
+              ><img src="Images/PlaceHolderIcon-64x64.png" alt="avatar"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/alfie-allan-95b480330"
+              target="_blank"
+              rel="noopener noreferrer"
+              alt="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <div>
+            <h4>Next Pages</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="aboutMe.html">About Me</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contactme.html">Contact Me</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="JS/main.js"></script>
-</body>
+  </body>
 </html>
