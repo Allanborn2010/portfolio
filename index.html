@@ -1,156 +1,242 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alfie Allan | Aspiring Software Developer</title>
 
-    <link rel="stylesheet" href="CSS/styles.css">
+    <link rel="stylesheet" href="CSS/styles.css" />
 
-    <link rel="shortcut icon" href="Images/favicon.ico" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="Images/Emoji/favicon - Emoji.ico"
+      type="image/x-icon"
+    />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
     <nav class="navbar">
-        <div class="container">
-            <div class="name">
-                <a href="index.html">
-                    <img src="Images/PlaceHolderIcon-64x64.png" alt="avatar">
-                </a>
-            </div>
-
-            <div class="main-menu">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="aboutMe.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contactme.html">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Hamburger Button -->
-
-            <button class="hamburger-button">
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-                <div class="hamburger-line"></div>
-            </button>
-            <div class="mobile-menu">
-                <ul>
-                    <li>
-                        <a href="index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href="aboutMe.html">About Me</a>
-                    </li>
-                    <li>
-                        <a href="projects.html">Projects</a>
-                    </li>
-                    <li>
-                        <a href="blog.html">Blog</a>
-                    </li>
-                    <li>
-                        <a href="contactme.html">Contact Me</a>
-                    </li>
-                </ul>
-            </div>
+      <div class="container">
+        <div class="name">
+          <a href="index.html">
+            <img
+              src="Images/Emoji/PlaceHolderIcon-64x64 - Emoji.png"
+              alt="Alfie Allan avatar"
+            />
+          </a>
         </div>
+
+        <div class="main-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="aboutMe.html">About Me</a>
+            </li>
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="contactme.html">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Hamburger Button -->
+
+        <button
+          class="hamburger-button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+        >
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+          <div class="hamburger-line"></div>
+        </button>
+        <div class="mobile-menu">
+          <ul>
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="aboutMe.html">About Me</a>
+            </li>
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="blog.html">Blog</a>
+            </li>
+            <li>
+              <a href="contactme.html">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero -->
 
     <section class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-heading text-xxl">
-                    Alfie William Allan
-                </h1>
-                <div class="hero-subheading text-l">
-                    <h3>Aspiring Software Developer<span class="period">.</span></h3>
-                </div>
-                <p class="hero-text">
-                    I’m a 16-year-old developer focused on software and web development. 
-                    I enjoy building clean, worthwhile software projects. 
-                    I learn best by building real projects.
-                </p>
-                <div class="hero-buttons">
-                    <a href="projects.html" class="btn btn-primary" style="background-color: rgb(39, 129, 39);">View Projects <i class="fa-solid fa-list-check"></i></a>
-                </div>
-            </div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="hero-heading text-xxl">Alfie William Allan</h1>
+          <div class="hero-subheading text-l">
+            <h3>Software & Web Developer<span class="period">.</span></h3>
+          </div>
+          <p class="hero-text">
+            I build practical projects with Python, HTML, CSS, and JavaScript,
+            with a growing focus on cybersecurity. I am currently seeking a
+            technology apprenticeship where I can contribute, keep learning, and
+            grow into a software engineer.
+          </p>
+          <div class="hero-buttons">
+            <a href="CV.html" class="btn btn-secondary" download
+              >Download CV <i class="fa-solid fa-download"></i
+            ></a>
+            <a
+              href="projects.html"
+              class="btn btn-primary"
+              style="background-color: rgb(39, 129, 39)"
+              >View Projects <i class="fa-solid fa-list-check"></i
+            ></a>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
 
-    <section class="testimonials bg-dark">
-        <div class="container">
-            <h3 class="testimonial-heading text-xl">
-                Teacher & Mentor Feedback 
-            </h3>
-            <div class="testimonials-grid">
-                <div class="card">
-                    <blockquote>
-                        "Shows strong problem-solving skills and a great attitude toward learning."
-                    </blockquote>
-                    <p class="author">— Computer Science Teacher</p>
-                </div>
-                <div class="card">
-                    <blockquote>
-                        "Shows strong problem-solving skills and a great attitude toward learning."
-                    </blockquote>
-                    <p class="author">— Computer Science Teacher</p>
-                </div>
-                <div class="card">
-                    <blockquote>
-                        "Shows strong problem-solving skills and a great attitude toward learning."
-                    </blockquote>
-                    <p class="author">— Computer Science Teacher</p>
-                </div>
-            </div>
+    <section
+      class="testimonials testimonials-feedback bg-dark"
+      aria-labelledby="testimonials-heading"
+    >
+      <div class="container">
+        <h2 id="testimonials-heading" class="testimonial-heading text-xl">
+          Teacher & mentor feedback
+        </h2>
+        <div class="testimonials-grid">
+          <div class="card">
+            <blockquote>
+              "Shows strong problem-solving skills and a great attitude toward
+              learning."
+            </blockquote>
+            <p class="author">Computer Science Teacher</p>
+          </div>
+          <div class="card">
+            <blockquote>
+              "Shows strong problem-solving skills and a great attitude toward
+              learning."
+            </blockquote>
+            <p class="author">Computer Science Teacher</p>
+          </div>
+          <div class="card">
+            <blockquote>
+              "Shows strong problem-solving skills and a great attitude toward
+              learning."
+            </blockquote>
+            <p class="author">Computer Science Teacher</p>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Current Focus -->
+
+    <section
+      class="testimonials bg-dark"
+      aria-labelledby="current-focus-heading"
+    >
+      <div class="container">
+        <h2 id="current-focus-heading" class="testimonial-heading text-xl">
+          Currently building & learning
+        </h2>
+        <div class="testimonials-grid">
+          <div class="card">
+            <h3>DevForge</h3>
+            <p>
+              Building a study planner to help students prioritise subjects,
+              manage revision time, and track their progress.
+            </p>
+            <a href="blog.html"
+              >Read the project timeline <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="card">
+            <h3>Practical development</h3>
+            <p>
+              Developing real Python and web projects to strengthen problem
+              solving, interface design, and programming fundamentals.
+            </p>
+            <a href="projects.html"
+              >View my projects <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+          <div class="card">
+            <h3>Cybersecurity learning</h3>
+            <p>
+              Expanding my security knowledge through IBM and Cisco courses
+              alongside my software development work.
+            </p>
+            <a href="aboutMe.html"
+              >More about me <i class="fas fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Footer -->
 
     <footer class="footer bg-black">
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <a href="index.html"><img src="Images/PlaceHolderIcon-64x64.png" alt="avatar"></a>
-                    <a href="https://www.linkedin.com/in/alfieallan/" target="_blank" rel="noopener noreferrer" alt="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
-                <div>
-                    <h4>Next Pages</h4>
-                    <ul>
-                        <li><a href="aboutMe.html">About Me</a></li>
-                        <li><a href="projects.html">Projects</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="contactme.html">Contact Me</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <a href="index.html"
+              ><img
+                src="Images/Emoji/PlaceHolderIcon-64x64 - Emoji.png"
+                alt="Alfie Allan avatar"
+            /></a>
+            <a
+              href="https://www.linkedin.com/in/alfieallan/"
+              target="_blank"
+              rel="noopener noreferrer"
+              alt="LinkedIn"
+            >
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </div>
+          <div>
+            <h4>Next Pages</h4>
+            <ul>
+              <li><a href="aboutMe.html">About Me</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="blog.html">Blog</a></li>
+              <li><a href="contactme.html">Contact Me</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
     </footer>
 
     <script src="JS/main.js"></script>
-</body>
+  </body>
 </html>
