@@ -93,52 +93,83 @@
       </div>
     </nav>
 
-    <!-- Blog  -->
-
-    <div class="blog">
-      <h1>My Current Project:</h1>
-      <div class="current-project">
-        <h3>DevForge</h3>
-        <p>Status: In early development as of 14/07/26</p>
-        <br />
+    <main class="blog-page">
+      <section class="blog-intro" aria-labelledby="blog-heading">
+        <p class="blog-eyebrow">Weekly notes</p>
+        <h1 id="blog-heading">The build log</h1>
         <p>
-          This is a study planner which helps students answer the difficult
-          study questions such as: What they should revises (subject), Time
-          management, Which subject is urgent and if they are on track.
+          Ideas, lessons, and progress from my journey into software
+          development.
         </p>
-        <br />
-        <h3>Timeline of events:</h3>
-        <br />
-        <ul class="timeline-list">
-          <li class="card">
-            V0.0 - Early Development, 31/05/26 -
-            <a
-              href="https://github.com/Allanborn2010/studyflow/commit/d0af6c981483798e6b7d4114dec8cf93c91df06a"
-              target="_blank"
-              >Click here (d0af6c98)</a
-            >
-          </li>
+      </section>
 
-          <li class="card">
-            V1.0 - Added ability to add: subjects, exams and topics, 31/05/26 -
-            <a
-              href="https://github.com/Allanborn2010/studyflow/commit/926f42e09db4e3746763122adf8e58762d0e7ad0"
-              target="_blank"
-              >Click here (926f42e0)</a
-            >
-          </li>
-          <li class="card">V0.1 - Project Created, 14/07/26</li>
-          <li class="card">
-            V0.1 - Project Created, 14/07/26 -
-            <a
-              href="https://github.com/Allanborn2010/studyflow/commit/d0af6c981483798e6b7d4114dec8cf93c91df06a"
-              target="_blank"
-              >Click here (d0af6c98)</a
-            >
-          </li>
-        </ul>
+      <div class="blog-layout">
+        <section class="blog-feed" aria-labelledby="posts-heading">
+          <div class="blog-feed-header">
+            <div>
+              <p class="blog-eyebrow">Archive</p>
+              <h2 id="posts-heading">Latest posts</h2>
+            </div>
+            <span class="post-count" aria-live="polite">1 post</span>
+          </div>
+
+          <div class="month-filters" aria-label="Filter posts by month">
+            <button class="month-filter active" type="button" data-month="all">
+              All posts
+            </button>
+            <button class="month-filter" type="button" data-month="09-2026">
+              September 2026
+            </button>
+          </div>
+
+          <div class="blog-posts">
+            <article class="blog-post" data-month="09-2026">
+              <div class="post-meta">
+                <time datetime="2026-09-02">02-09-2026</time>
+                <span>Improving</span>
+              </div>
+              <h3>Improving My Portfolio & Testing My Projects</h3>
+              <p>
+                Over the past couple of days, I’ve improved my carousel project
+                and made changes to how my portfolio is presented to potential
+                recruiters. I’ve also explored using Copilot as a web tester,
+                which helped me identify issues from a user’s perspective and
+                fix them.
+              </p>
+            </article>
+          </div>
+
+          <p class="no-posts" hidden>No posts from this month yet.</p>
+        </section>
+
+        <div class="blog-sidebar">
+          <aside class="current-learning" aria-labelledby="learning-heading">
+            <p class="blog-eyebrow">What I am working on</p>
+            <h2 id="learning-heading">Currently learning</h2>
+            <p>
+              I am studying GitHub, GitHub Copilot, and Claude courses while
+              learning and developing my skills with these tools.
+            </p>
+            <div class="learning-tags" aria-label="Current courses">
+              <span>GitHub</span>
+              <span>Copilot</span>
+              <span>Claude</span>
+            </div>
+          </aside>
+
+          <aside class="current-learning" aria-labelledby="projects-heading">
+            <p class="blog-eyebrow">What I am also working on</p>
+            <h2 id="projects-heading">Website Development</h2>
+            <p>
+              I am constantly developing my website and other projects to
+              strengthen my problem-solving skills and improve my portfolio. I
+              am also working on practical projects that help people and solve
+              real world problems.
+            </p>
+          </aside>
+        </div>
       </div>
-    </div>
+    </main>
 
     <!-- Footer -->
 
