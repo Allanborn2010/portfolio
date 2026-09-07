@@ -82,6 +82,38 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Blog month filters
+
+document.addEventListener("DOMContentLoaded", () => {
+  const filters = document.querySelectorAll(".month-filter");
+  const posts = document.querySelectorAll(".blog-post");
+  const noPosts = document.querySelector(".no-posts");
+  const postCount = document.querySelector(".post-count");
+  if (!filters.length || !posts.length) return;
+
+  filters.forEach((filterButton) => {
+    filterButton.addEventListener("click", () => {
+      const selectedMonth = filterButton.dataset.month;
+      let visiblePosts = 0;
+
+      filters.forEach((button) => button.classList.remove("active"));
+      filterButton.classList.add("active");
+
+      posts.forEach((post) => {
+        const isVisible =
+          selectedMonth === "all" || post.dataset.month === selectedMonth;
+        post.hidden = !isVisible;
+        if (isVisible) visiblePosts += 1;
+      });
+
+      if (noPosts) noPosts.hidden = visiblePosts > 0;
+      if (postCount) {
+        postCount.textContent = `${visiblePosts} ${visiblePosts === 1 ? "post" : "posts"}`;
+      }
+    });
+  });
+});
+
 // Contact Form Email Sending
 
 document.addEventListener("DOMContentLoaded", () => {
