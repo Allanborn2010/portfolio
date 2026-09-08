@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // Blog month filters
 
 document.addEventListener("DOMContentLoaded", () => {
-  const filters = document.querySelectorAll(".month-filter");
+  const filters = document.querySelectorAll(".month-filter, .year-filter");
   const posts = document.querySelectorAll(".blog-post");
   const noPosts = document.querySelector(".no-posts");
   const postCount = document.querySelector(".post-count");
@@ -94,14 +94,16 @@ document.addEventListener("DOMContentLoaded", () => {
   filters.forEach((filterButton) => {
     filterButton.addEventListener("click", () => {
       const selectedMonth = filterButton.dataset.month;
+      const selectedYear = filterButton.dataset.year;
       let visiblePosts = 0;
 
       filters.forEach((button) => button.classList.remove("active"));
       filterButton.classList.add("active");
 
       posts.forEach((post) => {
-        const isVisible =
-          selectedMonth === "all" || post.dataset.month === selectedMonth;
+        const isVisible = selectedYear
+          ? post.dataset.year === selectedYear
+          : selectedMonth === "all" || post.dataset.month === selectedMonth;
         post.hidden = !isVisible;
         if (isVisible) visiblePosts += 1;
       });

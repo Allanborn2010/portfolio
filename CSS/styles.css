@@ -626,7 +626,8 @@ p {
   margin: 22px 0;
 }
 
-.month-filter {
+.month-filter,
+.year-filter {
   padding: 9px 14px;
   border: 1px solid rgb(195, 201, 207);
   border-radius: 999px;
@@ -639,7 +640,9 @@ p {
 }
 
 .month-filter:hover,
-.month-filter.active {
+.month-filter.active,
+.year-filter:hover,
+.year-filter.active {
   border-color: var(--dark-color);
   background: var(--dark-color);
   color: rgb(255, 255, 255);
