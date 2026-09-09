@@ -20,26 +20,26 @@ I use this portfolio to document the software I build and demonstrate my practic
 
 ### Languages
 
-* Python
-* JavaScript
-* HTML5
-* CSS3
+- Python
+- JavaScript
+- HTML5
+- CSS3
 
 ### Tools & Technologies
 
-* Visual Studio Code
-* Git
-* GitHub
+- Visual Studio Code
+- Git
+- GitHub
 
 ## 📂 Portfolio
 
 The website includes sections covering:
 
-* **About Me** — A short introduction and background
-* **Skills** — Programming languages and technologies I work with
-* **Projects** — Software and applications I have developed
-* **Experience** — Relevant experience and achievements
-* **Contact** — Ways to get in touch
+- **About Me** — A short introduction and background
+- **Skills** — Programming languages and technologies I work with
+- **Projects** — Software and applications I have developed
+- **Experience** — Relevant experience and achievements
+- **Contact** — Ways to get in touch
 
 ## 🚀 Projects
 
@@ -47,9 +47,9 @@ My projects focus on developing practical programming skills through building ap
 
 Some projects include:
 
-* 🌦️ **Weather Application** — A weather application using an external API.
-* 🧮 **Live Calculator** — An interactive browser-based calculator.
-* 🎮 **Game Development Projects** — Projects exploring gameplay programming, mechanics and game development.
+- 🌦️ **Weather Application** — A weather application using an external API.
+- 🧮 **Live Calculator** — An interactive browser-based calculator.
+- 🎮 **Game Development Projects** — Projects exploring gameplay programming, mechanics and game development.
 
 More projects and details can be found on the live portfolio.
 
@@ -57,15 +57,15 @@ More projects and details can be found on the live portfolio.
 
 I'm continuing to develop my skills in:
 
-* Python development
-* Software engineering
-* Web development
-* APIs
-* Databases
-* Object-oriented programming
-* Git and version control
-* Problem solving
-* Building larger and more structured applications
+- Python development
+- Software engineering
+- Web development
+- APIs
+- Databases
+- Object-oriented programming
+- Git and version control
+- Problem solving
+- Building larger and more structured applications
 
 ## 🎯 Career
 
@@ -92,3 +92,5 @@ As I learn new technologies and build new projects, I will continue to update th
 ---
 
 ⭐ Thanks for taking the time to view my portfolio.
+
+<!-- Graph test -->
