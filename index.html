@@ -137,21 +137,39 @@
           Teacher & mentor feedback
         </h2>
         <div class="testimonials-grid">
-          <div class="card">
+          <div
+            class="card testimonial-card"
+            role="button"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="testimonial-modal"
+          >
             <blockquote>
               "Shows strong problem-solving skills and a great attitude toward
               learning."
             </blockquote>
             <p class="author">Computing Science Teacher</p>
           </div>
-          <div class="card">
+          <div
+            class="card testimonial-card"
+            role="button"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="testimonial-modal"
+          >
             <blockquote>
               "Shows strong problem-solving skills and a great attitude toward
               learning."
             </blockquote>
             <p class="author">Mathematics Teacher</p>
           </div>
-          <div class="card">
+          <div
+            class="card testimonial-card"
+            role="button"
+            tabindex="0"
+            aria-haspopup="dialog"
+            aria-controls="testimonial-modal"
+          >
             <blockquote>
               "Shows strong problem-solving skills and a great attitude toward
               learning."
@@ -161,6 +179,29 @@
         </div>
       </div>
     </section>
+
+    <div
+      class="testimonial-modal"
+      id="testimonial-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="testimonial-modal-author"
+      hidden
+    >
+      <div class="testimonial-modal-backdrop" data-close-testimonial></div>
+      <div class="testimonial-modal-content">
+        <button
+          class="testimonial-modal-close"
+          type="button"
+          aria-label="Close testimonial"
+          data-close-testimonial
+        >
+          <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+        </button>
+        <blockquote id="testimonial-modal-quote"></blockquote>
+        <p class="author" id="testimonial-modal-author"></p>
+      </div>
+    </div>
 
     <!-- Current Focus -->
 

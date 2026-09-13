@@ -116,6 +116,57 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// Testimonial modal
+
+document.addEventListener("DOMContentLoaded", () => {
+  const cards = document.querySelectorAll(".testimonial-card");
+  const modal = document.getElementById("testimonial-modal");
+  const quote = document.getElementById("testimonial-modal-quote");
+  const author = document.getElementById("testimonial-modal-author");
+  const closeButton = modal?.querySelector(".testimonial-modal-close");
+  let activeCard;
+
+  if (!cards.length || !modal || !quote || !author || !closeButton) return;
+
+  const closeModal = () => {
+    modal.hidden = true;
+    document.body.classList.remove("testimonial-modal-open");
+    activeCard?.focus();
+    activeCard = null;
+  };
+
+  const openModal = (card) => {
+    const cardQuote = card.querySelector("blockquote");
+    const cardAuthor = card.querySelector(".author");
+    if (!cardQuote || !cardAuthor) return;
+
+    quote.textContent = cardQuote.textContent.trim();
+    author.textContent = cardAuthor.textContent.trim();
+    activeCard = card;
+    modal.hidden = false;
+    document.body.classList.add("testimonial-modal-open");
+    closeButton.focus();
+  };
+
+  cards.forEach((card) => {
+    card.addEventListener("click", () => openModal(card));
+    card.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openModal(card);
+      }
+    });
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target.closest("[data-close-testimonial]")) closeModal();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
+});
+
 // Contact Form Email Sending
 
 document.addEventListener("DOMContentLoaded", () => {

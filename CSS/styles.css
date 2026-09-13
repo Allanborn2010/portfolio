@@ -302,6 +302,104 @@ img {
   font-weight: 600;
 }
 
+.testimonial-card {
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.testimonial-card:hover,
+.testimonial-card:focus-visible {
+  border-color: var(--primary-color);
+  background: rgba(255, 255, 255, 0.14);
+  outline: none;
+  transform: translateY(-4px);
+}
+
+.testimonial-modal[hidden] {
+  display: none;
+}
+
+.testimonial-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.testimonial-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.62);
+  backdrop-filter: blur(5px);
+}
+
+.testimonial-modal-content {
+  position: relative;
+  width: min(100%, 650px);
+  padding: 48px clamp(28px, 6vw, 64px) 42px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  background: rgb(24, 24, 24);
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.45);
+  animation: testimonial-modal-enter 0.2s ease-out;
+}
+
+.testimonial-modal-content blockquote {
+  color: rgb(255, 255, 255);
+  font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.testimonial-modal-content .author {
+  margin-top: 22px;
+  color: rgb(220, 225, 232);
+  font-weight: 600;
+}
+
+.testimonial-modal-close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  width: 38px;
+  height: 38px;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  background: transparent;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.testimonial-modal-close:hover,
+.testimonial-modal-close:focus-visible {
+  border-color: var(--primary-color);
+  background: var(--primary-color);
+  outline: none;
+}
+
+body.testimonial-modal-open {
+  overflow: hidden;
+}
+
+@keyframes testimonial-modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 /* Projects */
 
 .projects {
@@ -1080,6 +1178,18 @@ p {
 }
 
 @media (max-width: 670px) {
+  body {
+    font-size: 15px;
+  }
+
+  .navbar {
+    padding: 12px 16px;
+  }
+
+  .navbar .container {
+    padding: 0;
+  }
+
   .navbar .main-menu {
     display: none;
   }
@@ -1103,14 +1213,39 @@ p {
 
   .hero .container {
     background: url(../Images/Real/android-chrome-512x512.png) no-repeat;
-    background-size: min(325px, 82vw) auto;
-    background-position: bottom;
-    height: 770px;
+    background-size: min(250px, 68vw) auto;
+    background-position: center bottom;
+    height: auto;
+    min-height: 620px;
+    padding-bottom: 270px;
   }
 
   .hero .hero-content,
   .hero .hero-text {
     width: 100%;
+    text-align: center;
+  }
+
+  .hero {
+    margin-bottom: 24px;
+  }
+
+  .hero .hero-content {
+    padding-top: 1px;
+  }
+
+  .hero .hero-text {
+    margin-top: 16px;
+  }
+
+  .hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .hero-buttons .btn {
     text-align: center;
   }
 
@@ -1124,6 +1259,19 @@ p {
   .testimonials .testimonials-grid,
   .footer .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .testimonials .card {
+    min-height: 0;
+    padding: 24px 20px;
+  }
+
+  .testimonial-modal {
+    padding: 16px;
+  }
+
+  .testimonial-modal-content {
+    padding: 48px 24px 30px;
   }
 
   .footer .footer-grid > div {
@@ -1140,6 +1288,28 @@ p {
   }
   .text-md {
     font-size: 1.1rem;
+  }
+
+  /* Q&A filters */
+
+  .QA {
+    padding: 28px 0;
+  }
+
+  .QA ul.QA-menu {
+    width: 100%;
+    gap: 4px;
+    padding: 6px;
+  }
+
+  .QA ul.QA-menu li {
+    flex: 1 1 0;
+    padding: 9px 5px;
+    font-size: 0.78rem;
+  }
+
+  .QA .QA-group .QA-group-header {
+    padding-right: 28px;
   }
 
   /* Projects carousel */
@@ -1182,6 +1352,10 @@ p {
     min-height: 310px;
   }
 
+  .projects .projects-grid .card {
+    min-height: 280px;
+  }
+
   .projects .projects-grid .card:hover {
     transform: none;
     box-shadow: 0 12px 28px rgba(42, 56, 62, 0.14);
@@ -1191,5 +1365,36 @@ p {
 @media (max-width: 500px) {
   .text-xxl {
     font-size: 2rem;
+  }
+
+  .blog-page {
+    width: min(100% - 24px, 1120px);
+    margin-bottom: 48px;
+  }
+
+  .blog-feed-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .blog-feed-header h2,
+  .current-learning h2 {
+    font-size: 1.4rem;
+  }
+
+  .current-learning {
+    padding: 22px 18px;
+    box-shadow: 5px 5px rgb(218, 222, 226);
+  }
+
+  .contact-me {
+    width: calc(100% - 24px);
+    margin: 18px auto 42px;
+    padding: 30px 16px;
+    border-radius: 12px;
+    box-shadow:
+      6px 6px 0 rgba(72, 145, 255, 0.13),
+      0 12px 28px rgba(10, 10, 10, 0.08);
   }
 }
