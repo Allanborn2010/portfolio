@@ -29,6 +29,7 @@
     />
   </head>
   <body>
+    <!-- Site navigation -->
     <nav class="navbar">
       <div class="container">
         <div class="name">
@@ -60,7 +61,7 @@
           </ul>
         </div>
 
-        <!-- Hamburger Button -->
+        <!-- Mobile navigation toggle -->
 
         <button
           class="hamburger-button"
@@ -110,62 +111,88 @@
               <p class="blog-eyebrow">Archive</p>
               <h2 id="posts-heading">Latest posts</h2>
             </div>
-            <span class="post-count" aria-live="polite">1 post</span>
+            <span class="post-count" aria-live="polite">6 posts</span>
           </div>
 
-          <div class="month-filters" aria-label="Filter posts by month">
-            <button class="month-filter active" type="button" data-month="all">
-              All posts
-            </button>
-            <button class="year-filter" type="button" data-year="2026">
-              2026
-            </button>
-            <button class="month-filter" type="button" data-month="08-2026">
-              August 2026
-            </button>
-            <button class="month-filter" type="button" data-month="09-2026">
-              September 2026
-            </button>
+          <div class="blog-filters">
+            <div class="filter-group">
+              <span class="filter-label">Date</span>
+              <div class="month-filters" aria-label="Filter posts by date">
+                <button
+                  class="month-filter active"
+                  type="button"
+                  data-month="all"
+                >
+                  All posts
+                </button>
+                <button class="year-filter" type="button" data-year="2026">
+                  2026
+                </button>
+                <button class="month-filter" type="button" data-month="08-2026">
+                  August 2026
+                </button>
+                <button class="month-filter" type="button" data-month="09-2026">
+                  September 2026
+                </button>
+              </div>
+            </div>
+
+            <div class="filter-group">
+              <label class="filter-label" for="topic-filter">Topic</label>
+              <select class="topic-filter" id="topic-filter">
+                <option value="all">All topics</option>
+                <option value="game">Game improvements</option>
+                <option value="website">Website improvements</option>
+                <option value="certifications">Certifications</option>
+              </select>
+            </div>
           </div>
 
           <div class="blog-posts">
-            <article class="blog-post" data-month="08-2026" data-year="2026">
+            <article
+              class="blog-post"
+              data-category="website"
+              data-month="09-2026"
+              data-year="2026"
+            >
               <div class="post-meta">
-                <time datetime="2026-08-05">05-08-2026</time>
+                <time datetime="2026-09-09">09-09-2026</time>
                 <span>Improving</span>
               </div>
-              <h3>Improving Player Movement</h3>
+              <h3>Improving My Portfolio Blog</h3>
               <p>
-                I spent some time refining the player movement, making it feel
-                smoother and more responsive. Small changes to movement speed
-                and controls made a noticeable difference to how the game felt.
+                This week I focused on improving my portfolio and blog, adding
+                month and year filters and restructuring the blog to make my
+                project updates and learning easier to follow. I also improved
+                the recruiter experience across my portfolio and updated my CV
+                and personal introduction.
               </p>
             </article>
-            <article class="blog-post" data-month="08-2026" data-year="2026">
+            <article
+              class="blog-post"
+              data-category="website"
+              data-month="09-2026"
+              data-year="2026"
+            >
               <div class="post-meta">
-                <time datetime="2026-08-12">12-08-2026</time>
-                <span>Building</span>
+                <time datetime="2026-09-02">02-09-2026</time>
+                <span>Improving</span>
               </div>
-              <h3>Building the Weapon System</h3>
+              <h3>Improving My Portfolio &amp; Testing My Projects</h3>
               <p>
-                I worked on the game's shooting mechanics, getting the weapon to
-                respond properly to player input. This helped me understand how
-                different parts of the weapon system need to work together.
+                Over the past couple of days, I’ve improved my carousel project
+                and made changes to how my portfolio is presented to potential
+                recruiters. I’ve also explored using Copilot as a web tester,
+                which helped me identify issues from a user’s perspective and
+                fix them.
               </p>
             </article>
-            <article class="blog-post" data-month="08-2026" data-year="2026">
-              <div class="post-meta">
-                <time datetime="2026-08-19">19-08-2026</time>
-                <span>Building</span>
-              </div>
-              <h3>Adding Enemy AI</h3>
-              <p>
-                I started developing enemy behaviour so enemies could detect and
-                react to the player. Getting the AI to behave consistently was
-                challenging, but it made the game world feel much more alive.
-              </p>
-            </article>
-            <article class="blog-post" data-month="08-2026" data-year="2026">
+            <article
+              class="blog-post"
+              data-category="game"
+              data-month="08-2026"
+              data-year="2026"
+            >
               <div class="post-meta">
                 <time datetime="2026-08-26">26-08-2026</time>
                 <span>Improving</span>
@@ -177,23 +204,60 @@
                 details made the gameplay feel much more satisfying.
               </p>
             </article>
-            <article class="blog-post" data-month="09-2026" data-year="2026">
+            <article
+              class="blog-post"
+              data-category="game"
+              data-month="08-2026"
+              data-year="2026"
+            >
               <div class="post-meta">
-                <time datetime="2026-09-02">02-09-2026</time>
+                <time datetime="2026-08-19">19-08-2026</time>
+                <span>Building</span>
+              </div>
+              <h3>Adding Enemy AI</h3>
+              <p>
+                I started developing enemy behaviour so enemies could detect and
+                react to the player. Getting the AI to behave consistently was
+                challenging, but it made the game world feel much more alive.
+              </p>
+            </article>
+            <article
+              class="blog-post"
+              data-category="game"
+              data-month="08-2026"
+              data-year="2026"
+            >
+              <div class="post-meta">
+                <time datetime="2026-08-12">12-08-2026</time>
+                <span>Building</span>
+              </div>
+              <h3>Building the Weapon System</h3>
+              <p>
+                I worked on the game's shooting mechanics, getting the weapon to
+                respond properly to player input. This helped me understand how
+                different parts of the weapon system need to work together.
+              </p>
+            </article>
+            <article
+              class="blog-post"
+              data-category="game"
+              data-month="08-2026"
+              data-year="2026"
+            >
+              <div class="post-meta">
+                <time datetime="2026-08-05">05-08-2026</time>
                 <span>Improving</span>
               </div>
-              <h3>Improving My Portfolio & Testing My Projects</h3>
+              <h3>Improving Player Movement</h3>
               <p>
-                Over the past couple of days, I’ve improved my carousel project
-                and made changes to how my portfolio is presented to potential
-                recruiters. I’ve also explored using Copilot as a web tester,
-                which helped me identify issues from a user’s perspective and
-                fix them.
+                I spent some time refining the player movement, making it feel
+                smoother and more responsive. Small changes to movement speed
+                and controls made a noticeable difference to how the game felt.
               </p>
             </article>
           </div>
 
-          <p class="no-posts" hidden>No posts from this month yet.</p>
+          <p class="no-posts" hidden>No posts match these filters yet.</p>
         </section>
 
         <div class="blog-sidebar">
@@ -225,7 +289,7 @@
       </div>
     </main>
 
-    <!-- Footer -->
+    <!-- Site footer -->
 
     <footer class="footer bg-black">
       <div class="container">
