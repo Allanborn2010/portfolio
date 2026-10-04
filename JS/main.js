@@ -1,22 +1,23 @@
-// Q&A Accordion + Tabs
+// About page: Q&A tabs and accordion
+
 document.addEventListener("DOMContentLoaded", function () {
-  const QAContainer = document.querySelector(".QA-content");
+  const qaContainer = document.querySelector(".QA-content");
   const menu = document.querySelector(".QA-menu");
   const groups = document.querySelectorAll(".QA-group");
 
   // Tab switching (All / Qualifications / Experience)
   if (menu) {
-    menu.addEventListener("click", function (e) {
-      const li = e.target.closest("li");
-      if (!li) return;
+    menu.addEventListener("click", function (event) {
+      const selectedItem = event.target.closest("li");
+      if (!selectedItem) return;
 
       // Update active state on menu
       menu
         .querySelectorAll("li")
         .forEach((item) => item.classList.remove("active"));
-      li.classList.add("active");
+      selectedItem.classList.add("active");
 
-      const filter = li.dataset.filter;
+      const filter = selectedItem.dataset.filter;
 
       // Show/hide groups based on data-category
       groups.forEach((group) => {
@@ -30,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Accordion behaviour (inside visible groups)
-  if (QAContainer) {
-    QAContainer.addEventListener("click", function (e) {
-      const groupHeader = e.target.closest(".QA-group-header");
+  if (qaContainer) {
+    qaContainer.addEventListener("click", function (event) {
+      const groupHeader = event.target.closest(".QA-group-header");
       if (!groupHeader) return;
 
       const group = groupHeader.parentElement;
@@ -45,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
       groupBody.classList.toggle("open");
 
       // Close other open Q&A bodies
-      const otherGroups = QAContainer.querySelectorAll(".QA-group");
+      const otherGroups = qaContainer.querySelectorAll(".QA-group");
       otherGroups.forEach((other) => {
         if (other !== group) {
           const otherGroupBody = other.querySelector(".QA-group-body");
@@ -61,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-// Mobile Menu Toggle
+// Shared navigation: mobile menu toggle
 
 document.addEventListener("DOMContentLoaded", () => {
   const hamburgerButton = document.querySelector(".hamburger-button");
@@ -82,41 +83,80 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Blog month filters
+// Blog page: filters and newest-first ordering
 
 document.addEventListener("DOMContentLoaded", () => {
-  const filters = document.querySelectorAll(".month-filter, .year-filter");
-  const posts = document.querySelectorAll(".blog-post");
+  const categoryFilter = document.querySelector("#topic-filter");
+  const dateFilters = document.querySelectorAll(".month-filter, .year-filter");
+  const postsContainer = document.querySelector(".blog-posts");
+  const posts = [...document.querySelectorAll(".blog-post")];
   const noPosts = document.querySelector(".no-posts");
   const postCount = document.querySelector(".post-count");
-  if (!filters.length || !posts.length) return;
+  if (
+    !categoryFilter ||
+    !dateFilters.length ||
+    !postsContainer ||
+    !posts.length
+  ) {
+    return;
+  }
 
-  filters.forEach((filterButton) => {
+  let selectedCategory = "all";
+  let selectedDate = { month: "all", year: null };
+
+  posts.sort((firstPost, secondPost) => {
+    const firstDate = new Date(firstPost.querySelector("time").dateTime);
+    const secondDate = new Date(secondPost.querySelector("time").dateTime);
+    return secondDate - firstDate;
+  });
+
+  posts.forEach((post) => postsContainer.append(post));
+
+  // Apply both filters while keeping the posts in date order.
+  const renderPosts = () => {
+    let visiblePosts = 0;
+
+    posts.forEach((post) => {
+      const matchesCategory =
+        selectedCategory === "all" ||
+        post.dataset.category === selectedCategory;
+      const matchesDate = selectedDate.year
+        ? post.dataset.year === selectedDate.year
+        : selectedDate.month === "all" ||
+          post.dataset.month === selectedDate.month;
+      const isVisible = matchesCategory && matchesDate;
+
+      post.hidden = !isVisible;
+      if (isVisible) visiblePosts += 1;
+    });
+
+    if (noPosts) noPosts.hidden = visiblePosts > 0;
+    if (postCount) {
+      postCount.textContent = `${visiblePosts} ${visiblePosts === 1 ? "post" : "posts"}`;
+    }
+  };
+
+  categoryFilter.addEventListener("change", () => {
+    selectedCategory = categoryFilter.value;
+    renderPosts();
+  });
+
+  dateFilters.forEach((filterButton) => {
     filterButton.addEventListener("click", () => {
-      const selectedMonth = filterButton.dataset.month;
-      const selectedYear = filterButton.dataset.year;
-      let visiblePosts = 0;
-
-      filters.forEach((button) => button.classList.remove("active"));
+      selectedDate = {
+        month: filterButton.dataset.month || null,
+        year: filterButton.dataset.year || null,
+      };
+      dateFilters.forEach((button) => button.classList.remove("active"));
       filterButton.classList.add("active");
-
-      posts.forEach((post) => {
-        const isVisible = selectedYear
-          ? post.dataset.year === selectedYear
-          : selectedMonth === "all" || post.dataset.month === selectedMonth;
-        post.hidden = !isVisible;
-        if (isVisible) visiblePosts += 1;
-      });
-
-      if (noPosts) noPosts.hidden = visiblePosts > 0;
-      if (postCount) {
-        postCount.textContent = `${visiblePosts} ${visiblePosts === 1 ? "post" : "posts"}`;
-      }
+      renderPosts();
     });
   });
+
+  renderPosts();
 });
 
-// Testimonial modal
+// Home page: testimonial modal
 
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".testimonial-card");
@@ -140,7 +180,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const cardAuthor = card.querySelector(".author");
     if (!cardQuote || !cardAuthor) return;
 
-    quote.textContent = cardQuote.textContent.trim();
+    quote.textContent = card.dataset.modalQuote || cardQuote.textContent.trim();
     author.textContent = cardAuthor.textContent.trim();
     activeCard = card;
     modal.hidden = false;
@@ -167,7 +207,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Contact Form Email Sending
+// Contact page: EmailJS form and send cooldown
 
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");

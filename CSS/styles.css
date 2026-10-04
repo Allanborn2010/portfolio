@@ -302,6 +302,14 @@ img {
   font-weight: 600;
 }
 
+.testimonial-card .click-hint {
+  margin-top: auto;
+  color: var(--primary-color);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
 .testimonial-card {
   cursor: pointer;
   transition:
@@ -717,11 +725,31 @@ p {
   font-size: 0.85rem;
 }
 
+.blog-filters {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 22px 0;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.filter-label {
+  color: rgb(76, 82, 92);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
 .month-filters {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 22px 0;
 }
 
 .month-filter,
@@ -744,6 +772,36 @@ p {
   border-color: var(--dark-color);
   background: var(--dark-color);
   color: rgb(255, 255, 255);
+}
+
+.topic-filter {
+  width: min(100%, 240px);
+  padding: 9px 14px;
+  border: 1px solid rgb(195, 201, 207);
+  border-radius: 999px;
+  background: transparent;
+  color: var(--dark-color);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  transition: 0.2s ease;
+}
+
+.topic-filter:hover {
+  border-color: var(--dark-color);
+  background: var(--dark-color);
+  color: rgb(255, 255, 255);
+}
+
+.topic-filter:focus-visible {
+  border-color: var(--dark-color);
+  outline: 3px solid rgba(72, 145, 255, 0.2);
+  outline-offset: 2px;
+}
+
+.topic-filter option {
+  background: rgb(255, 255, 255);
+  color: var(--dark-color);
 }
 
 .blog-post {
