@@ -111,7 +111,7 @@
               <p class="blog-eyebrow">Archive</p>
               <h2 id="posts-heading">Latest posts</h2>
             </div>
-            <span class="post-count" aria-live="polite">9 posts</span>
+            <span class="post-count" aria-live="polite">10 posts</span>
           </div>
 
           <div class="blog-filters">
@@ -122,17 +122,31 @@
                   class="month-filter active"
                   type="button"
                   data-month="all"
+                  aria-pressed="true"
                 >
                   All posts
                 </button>
-                <button class="year-filter" type="button" data-year="2026">
+                <button
+                  class="year-filter"
+                  type="button"
+                  data-year="2026"
+                  aria-pressed="false"
+                >
                   2026
                 </button>
-                <button class="month-filter" type="button" data-month="08-2026">
-                  August 2026
+                <button
+                  class="month-filter"
+                  type="button"
+                  data-month="10-2026"
+                  aria-pressed="false"
+                >
+                  October 2026
                 </button>
                 <button class="month-filter" type="button" data-month="09-2026">
                   September 2026
+                </button>
+                <button class="month-filter" type="button" data-month="08-2026">
+                  August 2026
                 </button>
               </div>
             </div>
@@ -148,9 +162,29 @@
                 <option value="certifications">Certifications</option>
               </select>
             </div>
+
+            <button class="filter-reset" type="button">Clear filters</button>
           </div>
 
           <div class="blog-posts">
+            <article
+              class="blog-post"
+              data-category="learning"
+              data-month="10-2026"
+              data-year="2026"
+            >
+              <div class="post-meta">
+                <time datetime="2026-10-07">07-10-2026</time>
+                <span>Progressing</span>
+              </div>
+              <h3>Progressing My Development Skills</h3>
+              <p>
+                I continued working towards my GitHub certification and
+                researched a new project to start alongside my portfolio. Both
+                are helping me build my development skills and plan my next
+                steps.
+              </p>
+            </article>
             <article
               class="blog-post"
               data-category="learning"

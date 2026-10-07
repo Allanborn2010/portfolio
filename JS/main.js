@@ -92,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const posts = [...document.querySelectorAll(".blog-post")];
   const noPosts = document.querySelector(".no-posts");
   const postCount = document.querySelector(".post-count");
+  const resetFilters = document.querySelector(".filter-reset");
   if (
     !categoryFilter ||
     !dateFilters.length ||
@@ -147,10 +148,26 @@ document.addEventListener("DOMContentLoaded", () => {
         month: filterButton.dataset.month || null,
         year: filterButton.dataset.year || null,
       };
-      dateFilters.forEach((button) => button.classList.remove("active"));
+      dateFilters.forEach((button) => {
+        const isActive = button === filterButton;
+        button.classList.toggle("active", isActive);
+        button.setAttribute("aria-pressed", String(isActive));
+      });
       filterButton.classList.add("active");
       renderPosts();
     });
+  });
+
+  resetFilters?.addEventListener("click", () => {
+    selectedCategory = "all";
+    selectedDate = { month: "all", year: null };
+    categoryFilter.value = "all";
+    dateFilters.forEach((button) => {
+      const isAllPosts = button.dataset.month === "all";
+      button.classList.toggle("active", isAllPosts);
+      button.setAttribute("aria-pressed", String(isAllPosts));
+    });
+    renderPosts();
   });
 
   renderPosts();
